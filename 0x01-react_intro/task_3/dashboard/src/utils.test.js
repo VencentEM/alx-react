@@ -1,3 +1,20 @@
+/*import { getFullYear, getFooterCopy, getLatestNotification } from './utils';
+
+test('returns current year', () => {
+    expect(getFullYear()).toBe(2021);
+});
+
+test('correct footer copy', () => {
+    expect(getFooterCopy(true)).toBe('Holberton School');
+    expect(getFooterCopy(false)).toBe('Holberton School main dashboard');
+});
+
+test('returns right notification', () => {
+    expect(getLatestNotification()).toBe(
+        '<strong>Urgent Requirement</strong> - complete by EOD'
+    );
+});
+*/
 import React from 'react';
 import { act } from 'react-dom/test-utils';
 import { getFullYear, getFooterCopy, getLatestNotification } from './utils'
@@ -5,7 +22,8 @@ import { getFullYear, getFooterCopy, getLatestNotification } from './utils'
 
 // test to check getFullYear returns correct year
 test('getFullYear returns correct year', () => {
-    expect(getFullYear()).toBe(2022);
+    const currentYear = new Date().getFullYear(); // Get the current year dynamically
+    expect(getFullYear()).toBe(currentYear);     // Compare dynamically
 });
 
 
